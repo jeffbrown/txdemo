@@ -5,6 +5,11 @@ import grails.transaction.Transactional
 @Transactional
 class DemoController {
 
+    def create(Person p) {
+        p.save()
+        respond p
+    }
+
     def show(Person p) {
         respond p
     }
